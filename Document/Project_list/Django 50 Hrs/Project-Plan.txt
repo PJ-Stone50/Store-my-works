@@ -1,0 +1,11 @@
+ลองทำให้ base เป็นแบบ   www.matichon.co.th
+	1. Design MenuBar
+	2. Split body ให้เป็น 2 : 1 (ซ้ายเป็น Content, ขวาเป็นที่ลงโฆษณา และอื่นๆ)
+	3. ใต้ MenuBar ทำเป็น jumbotron ที่มี text-animation คำว่า (" พื้นที่รอลงโฆษณา ")
+	4. ทำให้ footer ล่างสุดของ page ไว้ show contact us บางส่วน (ใช้คำสั่งให้มันอยู่ล่างสุดของ base เสมอ)
+		- ใส่ไว้ล่างสุดด้วย  Copyright © by Matichon Public Co.,Ltd. All Rights Reserved.
+
+
+JS
+	1. ทำช่อง search
+	2. 

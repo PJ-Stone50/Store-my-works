@@ -1,0 +1,17 @@
+48.44
+
+
+1. วิธีออกจาก Server 
+	กด Ctrl + C
+
+2. Start Server
+	python manage.py startapp myapp
+
+
+
+3. วิธีใช้ ngrok
+	เปิดไฟล์ชื่อ ngrok.exe ในโฟลเดอร์ Django 50 Hrs แล้วใช้คำสั่ง
+	- ngrok http 8000
+	เสร็จแล้วเจ้าจะได้ url ที่สร้างโดย ngrok ที่เป็นสกุล .io เอาไว้ใช้ชั่วคราวววว...
+
+

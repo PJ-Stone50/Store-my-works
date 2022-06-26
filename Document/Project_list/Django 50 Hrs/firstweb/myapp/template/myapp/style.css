@@ -1,0 +1,48 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #191919;
+}
+h2
+{
+    position: relative;
+    font-size: 14vw;
+    color: #191919;
+    -webkit-text-stroke: 0.3vw;
+    text-transform: uppercase;
+}
+h2::before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: purple;
+    -webkit-text-stroke: 0vw purple;
+    border-right: 2px solid orange;
+    overflow:hidden;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        width:0;
+    }
+    70%,90%
+    {
+        width:100%;
+    }
+}

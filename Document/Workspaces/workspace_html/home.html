@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Festive&family=Inconsolata:wght@300&family=Otomanopee+One&family=Yomogi&display=swap" rel="stylesheet">
+  <!-- font -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet"  href="/firstweb/style2.css"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+
+  img {
+    width: 250px;
+    height: 250px;
+  }
+
+  #jumbotron-hompage {
+    background: #191919;
+    /*margin: 220px;*/
+    
+  }
+
+  .center {
+    display: flex;
+    /*right: 500px;*/
+    justify-content: center;
+  }
+
+  .text-about-head {
+    position: relative;
+    left: 750px;
+    bottom: 460px;
+  }
+  .text-about-body {
+    position: relative;
+    left: 750px;
+    bottom: 500px;
+  }
+
+  .text-about-foot {
+    position: relative;
+    left: 750px;
+    bottom: 600px;
+  }
+
+  .container {
+    /*width: 300px;*/
+    background: #191919;
+    text-align: center;
+    /*display: inline;*/
+    /*flex-direction: row-reserve ;*/
+  }
+
+  .jumbotron {
+    /*display: inline;*/
+    background: orange;
+    margin: 0;
+    /*padding: 50px;*/
+    /*position: relative;*/
+    /*right: 100px;*/
+  }
+
+  head {
+    background: #191919;
+  }
+
+  body {
+    background: #191919;
+  }
+
+  .flex-container {
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    flex-flow: column nowrap;
+    /*(flex-flow)คือการใช้ flex-direction กับ flex-wrap พร้อมกันและกำหนด value ตามลำดับ*/
+    /*justify-content: flex-between;*/
+  }
+
+  .flex-item1 {
+    background-color: red;
+    padding: 10px;
+    flex: 50%;
+    /*c*/
+  }
+
+  .flex-item2 {
+    background-color: #FFFF99;
+    padding: 10px;
+    flex: 50%;
+  }
+
+  .flex-item3 {
+    background-color: darkgreen;
+    padding: 10px;
+    flex: 50%;
+  }
+
+  .flex-item4 {
+    background-color: purple;
+    padding: 10px;
+    flex: 50%;
+  }
+
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 100%) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+
+  h4
+  {
+      margin: 0;
+      padding: 0;
+      color: #191919;
+      /*height: 10px;*/
+      font-size: 8em;
+      /*margin-left: 420px;*/
+      /*margin-top: 550px;*/
+      font-family: 'Yomogi', cursive;
+  }
+  h4 span
+  {
+      display: table-cell;
+      margin: 0;
+      padding: 0;
+      animation: animate 2s linear infinite;
+      animation-duration: 2s;
+  }
+  h4 span:nth-child(1)
+  {
+      animation-delay: 0s;
+  }
+  h4 span:nth-child(2)
+  {
+      animation-delay: 0.25s;
+  }
+  h4 span:nth-child(3)
+  {
+      animation-delay: 0.5s;
+  }
+  h4 span:nth-child(4)
+  {
+      animation-delay: 0.75s;
+  }
+  h4 span:nth-child(5)
+  {
+      animation-delay: 1s;
+  }
+  h4 span:nth-child(6)
+  {
+      animation-delay: 1.25s;
+  }
+  h4 span:nth-child(7)
+  {
+      animation-delay: 1.5s;
+  }
+  h4 span:nth-child(8)
+  {
+      animation-delay: 1.75s;
+  }
+
+  @keyframes animate 
+  {
+      0%,100%
+      {
+          color: #fff;
+          filter: blur(2px);
+          text-shadow: 0 0 10px #191919,
+                       0 0 20px #191919,
+                       0 0 40px #191919,
+                       0 0 80px #191919,
+                       0 0 120px #191919,
+                       0 0 200px #191919,
+                       0 0 300px #191919,
+                       0 0 10px #191919;
+
+
+          
+      }
+      5%,95%
+      {
+          color: #191919;
+          filter: blur(0px);
+          text-shadow: 0 0 10px black;
+      }
+  }3ff;
+      }
+  }
+  
+</style>
+
+<div class="jumbotron col text-center">
+
+<p><strong style="font-size:20px">First website</strong> I made by Django.</p>
+<p>
+  <a href="{% url 'home-page' %}">หน้าแรก</a>|
+  <a href="{% url 'about-page' %}">เกี่ยวกับเรา</a>|
+  <a href="{% url 'contact-page' %}">ติดต่อเรา</a>|
+  <a href="{% url 'product-page' %}">Product</a>
+</p>
+<p>
+  <a href="">|For Admin|</a>
+</p>
+</div>
+
+<div id="jumbotron-hompage">
+  <h4 class="center">
+    <span>H</span>
+    <span>O</span>
+    <span>M</span>
+    <span>E</span>
+    <span>P</span>
+    <span>A</span>
+    <span>G</span>
+    <span>E</span>
+  </h4>
+</div>
+
+<!-- <h1 class="jumbotron text-center">Interested in</h1>  -->
+<h2 id="text-animation" data-text="Never_stop_learning...">Never_stop_learning...</h2>
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+
+    <div class="flex-item1 col-sm-3" >
+      <a href="http://localhost:8000/about">
+        <img src="https://i.pinimg.com/originals/a2/7d/14/a27d14a27b5ef7d35c241d5cc9c1deb4.png" alt="img-html">
+      </a>
+      <h2><strong>About my Html</strong></h2>
+      <h3>Start learning html since May 16 2021</h3>
+      <h3>{{ day_count1 }}</h3> 
+    </div>
+
+    <div class="flex-item2 col-sm-3">
+      <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--dsHlGdeo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/io2xjx6ls6sfrfnhejd6.png" alt="img-js">
+      <h2><strong>About my Javascript</strong></h2>
+      <h3>Start learning Javascript since May 21 2021</h3> 
+      <h3>{{ day_count2 }}</h3> 
+    </div>
+    
+    
+    <div class="flex-item3 col-sm-3">
+      <img src="https://i.pinimg.com/originals/3f/6e/c4/3f6ec446dd918554f22b774dbd5927c3.png" alt="img-django">
+      <h2><strong>About my Django</strong></h2>
+      <h3>Start learning html since June 14 2021</h3> 
+      <h3>{{ day_count3 }}</h3> 
+    </div>
+    
+    <div class="flex-item4 col-sm-3">
+      <img src="https://lh5.googleusercontent.com/proxy/Q1o3zfycZvjPt7xxBrRegbVysIMTbh-TyOObjp2EW5NC2M2u2dhWL9sAJuXO3iqm-w0MrvvVsCy1UxLrPVVlO5eGin-la4LKX9uNAlii=s0-d" alt="img-bootstrap">
+      <h2><strong>About my Bootstrap</strong></h2>
+      <h3>Start learning html since June 16 2021</h3> 
+      <h3>{{ day_count4 }}</h3> 
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

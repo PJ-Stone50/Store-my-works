@@ -1,0 +1,40 @@
+swagger: '2.0'
+info:
+  title: Rooms API
+  version: 1.0.0
+consumes:
+  - application/json
+produces:
+  - application/json
+basePath: /v1
+paths:
+  /checkdb:
+    get:
+      operationId: hotels.checkdb
+      tags:
+        - Rooms
+      summary: Check database connection
+      responses:
+        '200':
+          description: Successful
+          schema:
+            type: string
+  /room:
+    get:
+      operationId: hotels.all
+      tags:
+        - Rooms
+      summary: Retrieve all of rooms
+      responses:
+        '200':
+          description: Successful
+          schema:
+            type: array
+            items:
+              properties:
+                name:
+                  type: string
+                desc:
+                  type: string
+                image:
+                  type: string

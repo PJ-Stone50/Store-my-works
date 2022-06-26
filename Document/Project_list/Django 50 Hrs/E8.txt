@@ -1,0 +1,6 @@
+วันนี้พยายาม จบ Django Ep10 ให้ได้
+
+อ่านเว็บนี้จบมีตาย  FileSystemStorage Django 999 Hrs. #999{Infinite}
+	- https://docs.djangoproject.com/en/3.2/ref/files/storage/
+	- https://www.programcreek.com/python/example/59557/django.core.files.storage.FileSystemStorage
+เน็ตกาก +1

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<!-- Bootstrap5 -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+
+<style>
+	
+	
+
+
+	img {
+		padding: 20px;
+		width: 350px;
+		height: 350px;
+		/*object-fit: cover;*/
+		/*object-position: top;*/
+	}
+
+	#profile-image {
+		width: 100px;
+		height: 100px;
+	}
+
+	head {
+		background: #FFA07A;
+		
+	}
+
+	body {
+		background: #191919;
+	}
+
+	#topic-text {
+		font-family: 'Allerta Stencil', sans-serif;
+		font-size: 3rem;
+		margin: auto;
+	}
+	
+	a {
+		font-size: 1.25rem;
+	}
+
+	#head-text {
+		text-align: center;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+
+	#form-style {
+		text-align: center;
+	}
+
+</style>
+
+<script>
+
+			document.addEventListener('DOMContentLoaded',function(event){
+	// array with texts to type in typewriter
+	var dataText = [ "Become a Programmer", "Software Engineer ?", "Data Specialist", "or Full-Stack Developer.."];
+			dataText2 = ["Welcome to my First Website"];
+	
+	// type one text in the typwriter
+	// keeps calling itself until the text is finished
+	// stop at this moment! and go to have a learn next Episode Oh shit I'm so high right now! 
+	function typeWriter(text, i, fnCallback) {
+		// chekc if text isn't finished yet
+		if (i < (text.length)) {
+			// add next character to h1
+		 document.querySelector("h5").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+			// wait for a while and call this function again for next character
+			setTimeout(function() {
+				typeWriter(text, i + 1, fnCallback)
+			}, 300);
+		}
+		// text finished, call callback if there is a callback function
+		else if (typeof fnCallback == 'function') {
+			// call callback after timeout
+			setTimeout(fnCallback, 1000);
+		}
+	}
+
+	function typeWriter2(text, i, fnCallback) {
+		// chekc if text isn't finished yet
+		if (i < (text.length)) {
+			// add next character to h1
+		 document.querySelector("h4").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+			// wait for a while and call this function again for next character
+			setTimeout(function() {
+				typeWriter2(text, i + 1, fnCallback)
+			}, 300);
+		}
+		// text finished, call callback if there is a callback function
+		else if (typeof fnCallback == 'function') {
+			// call callback after timeout
+			setTimeout(fnCallback, 1000);
+		}
+	}
+
+
+	// start a typewriter animation for a text in the dataText array
+	 function StartTextAnimation(i) {
+		 if (typeof dataText[i] == 'undefined'){
+				setTimeout(function() {
+					StartTextAnimation(0);
+				}, 20000);
+		 }
+		 // check if dataText[i] exists
+		if (i < dataText[i].length) {
+			// text exists! start typewriter animation
+		 typeWriter(dataText[i], 0, function(){
+			 // after callback (and whole text has been animated), start next text
+			 StartTextAnimation(i + 1);
+		 });
+		}
+	}
+
+	function StartTextAnimation2(i) {
+		 if (typeof dataText2[i] == 'undefined'){
+				setTimeout(function() {
+					StartTextAnimation2(0);
+				}, 20000);
+		 }
+		 // check if dataText[i] exists
+		if (i < dataText2[i].length) {
+			// text exists! start typewriter animation
+		 typeWriter2(dataText2[i], 0, function(){
+			 // after callback (and whole text has been animated), start next text
+			 StartTextAnimation2(i + 1);
+		 });
+		}
+	}
+	// start the text animation
+	StartTextAnimation(0);
+	StartTextAnimation2(0);
+});
+</script>
+
+
+<!-- <h1 class="jumbotron text-center">Interested in</h1>  -->
+<!-- <h2 id="text-animation" data-text="Never_stop_learning...">Never_stop_learning...</h2> -->
+	<div class="menubar">
+		<!-- ใช้ fixed-top กำหนดให้แถบอยู่บนสุด -->
+		<nav class="navbar navbar-expand-sm navbar-light bg-light"> 
+				<a href="{% url 'home-page' %}" class="navbar-brand mb-0 h1">
+						<button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"	class="navbar-toggler" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon">
+			
+							</span>
+						</button>
+
+						<h2 id="topic-text" class="d-inline-block align-top"><sup style="color: #191919;">A</sup>Store</h2>
+				</a>
+					
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a href="{% url 'home-page' %}" class="nav-link" style="font-size: 1.5rem;"><strong>Home</strong></a>
+						</li>
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">สินค้าทั้งหมด</a>
+							
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a href="{% url 'allproduct-page' %}" class="dropdown-item">CPU</a></li>
+								<li><a href="#" class="dropdown-item">MONITOR</a></li>
+								<li><a href="#" class="dropdown-item">STORAGE & MEMORY CARD</a></li>
+							</ul>
+						</li>
+						<li class="nav-item active">
+							<a href="{% url 'about-page' %}" class="nav-link">เกี่ยวกับเรา</a>
+						</li>
+						<li class="nav-item active">
+							<a href="{% url 'contact-page' %}" class="nav-link">ติดต่อเรา</a>
+						</li>
+						<li class="nav-item active">
+							<a href="{% url 'product-page' %}" class="nav-link">Product</a>
+						</li>
+
+						{% if user.is_authenticated and user.profile.usertype == 'admin' %}
+						<!-- ||&nbsp คืออักขระพิเศษไว้เว้นวรรค ส่วน user.first_name มาจาก function Register in views.py -->	
+						<li class="nav-item active">
+							<a href="{% url 'addproduct-page' %}" class="nav-link">เพิ่มสินค้า</a>	
+						</li>									
+						{% endif %}
+
+						{% if user.is_authenticated and user.profile.usertype == 'member' %}
+						<li class="nav-item">
+							<a class="nav-link" href="#">รายการสั่งซื้อ</a>
+						</li>
+						{% endif %}
+
+					</ul>
+				
+
+				
+				
+				
+				</div>
+				{% if user.is_authenticated %}
+					<!-- || ดึกรูปโปรไฟล์มาจาก user.profile.photo.url -->
+					<img id="profile-image" src="{{user.profile.photo.url}}" width="40" height="40" class="rounded-circle">&nbsp&nbsp
+					<!-- || ถ้าอยากเช็คว่า User ที่ login เป็น member หรือ admin ใช้คำสั่ง [ {{user.profile.usertype}} ] -->
+					<p style="margin-right: 1rem;">สวัสดีคุณ&nbsp&nbsp <u>{{user.first_name}}</u> &nbsp <u>{{user.last_name}}</u></p>	
+					<a class="btn btn-secondary" href="{% url 'logout' %}">Logout</a>
+				{% else %}
+					<a class="btn btn-primary" href="{% url 'register-page' %}">Register</a>&nbsp&nbsp&nbsp
+					<a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+				{% endif %}
+				
+		</nav>
+		<!-- || Navbar script -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+	</div>
+		
+	
+
+</head>
+
+<body>
+<div class="container">
+	{% block content %}
+
+	{% endblock content %}
+</div>
+</body>
+</html>

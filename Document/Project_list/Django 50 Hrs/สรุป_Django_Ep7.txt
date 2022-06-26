@@ -1,0 +1,42 @@
+Ep7.
+
+วิธีเพื่อ...ลงหน้าแก้ไขสินค้า
+	- ไฟล์ models.py เพิ่มคำสั่งลงไปในฟังก์ชัน Allproduct
+		- instock = models.BooleanField(default=True)
+	- python manage.py makemigrations 
+	- python manage.py migrate
+	- หลังจาก migrate แล้วจะทำการ create file ในโฟลเดอร์ migrations
+	- ไปดูในหน้า admin/Allproduct/Changeสินค้า จะปรากฏ instock ที่เป็นกล่อง Boolean
+
+
+วิธีสร้าง Field เพื่อใช้อัพโหลด image แล้วเก็บไว้ใน /media/products
+1. ไปที่ setting บรรทัดสุดท้ายเพิ่มคำว่า 
+	- MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+2. ไป urls.py
+	- from . import settings
+	- from django.contrib.staticfiles.urls import static
+	- from django.contrib.staticfiles.urls import static_urlpatterns 
+	เสร็จแล้วเพิ่มคำสั่ง
+	- urlpatterns += static_urlpatterns()
+	- urlpatterns += static(setting.MEDIA_URL, document_root=setting.MEDIA_ROOT)
+3. models.py เพิ่มและแก้ไขคำสั่ง
+	- class Allproduct(models.Model): # ฟังก์ชันในหน้าแก้ไขสินค้าใน admin-page
+	- name = models.CharField(max_length = 100)
+	- price = models.CharField(max_length = 100)
+	- detail = models.TextField(null = True,blank = True)
+	- imageurl = models.CharField(max_length = 200,null = True,blank = True)
+	- instock = models.BooleanField(default=True)
+	- quantity = models.IntegerField(default=1)
+	- unit = models.CharField(max_length="200",default='-')
+	- image = models.ImageField(upload_to="gallery",null
+4. go to cmd and makemigrations
+5. migrate
+
+ทำให้รูปสินค้ามีกากบาทหรือการแสดงว่าหมด(ตอนนี้เปลี่ยนได้แค่ปุ่ม)
+เพิ่มหน้า allproduct ลง base 
+
+*ยังไม่เข้าใจการใช้ .order_by('id').reverse()
+* ฝึกใช้ JS ทำ text-writing(Level-2)
+	-https://css-tricks.com/snippets/css/typewriter-effect/
+	- วนลูป array ใน JS ยังไม่เป็น
+	- ฝันดีคับ

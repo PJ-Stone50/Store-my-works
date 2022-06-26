@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    img {
+      width: 250px;
+      height: 250px;
+    }
+
+    h1,h3 {
+      text-align: center;
+    }
+
+    .text-about-head {
+      position: relative;
+      left: 750px;
+      bottom: 460px;
+    }
+    .text-about-body {
+      position: relative;
+      left: 750px;
+      bottom: 500px;
+    }
+
+    .text-about-foot {
+      position: relative;
+      left: 750px;
+      bottom: 600px;
+    }
+
+    .container {
+      /*width: 300px;*/
+      background: white;
+      /*display: inline;*/
+      /*flex-direction: row-reserve ;*/
+    }
+
+    .jumbotron {
+      /*display: inline;*/
+      background: orange;
+      /*padding: 50px;*/
+      /*position: relative;*/
+      /*right: 100px;*/
+    }
+
+    head {
+      background: #191919;
+    }
+
+    body {
+      background: white;
+    }
+
+    .flex-container {
+      display: flex;
+      font-size: 30px;
+      text-align: center;
+      flex-flow: column nowrap;
+      /*(flex-flow)คือการใช้ flex-direction กับ flex-wrap พร้อมกันและกำหนด value ตามลำดับ*/
+      /*justify-content: flex-between;*/
+    }
+
+    .flex-item1 {
+      background-color: red;
+      padding: 10px;
+      flex: 50%;
+      /*c*/
+    }
+
+    .flex-item2 {
+      background-color: #FFFF99;
+      padding: 10px;
+      flex: 50%;
+    }
+
+    .flex-item3 {
+      background-color: darkgreen;
+      padding: 10px;
+      flex: 50%;
+    }
+
+    .flex-item4 {
+      background-color: purple;
+      padding: 10px;
+      flex: 50%;
+    }
+
+    .flex-item5 {
+      background-color: purple;
+      padding: 10px;
+      flex: 50%;
+    }
+
+    .flex-item6 {
+      background-color: purple;
+      padding: 10px;
+      flex: 50%;
+    }
+    
+    .flex-item7 {
+      background-color: purple;
+      padding: 10px;
+      flex: 50%;
+    }
+    
+    .flex-item8 {
+      background-color: purple;
+      padding: 10px;
+      flex: 50%;
+    }
+    
+    .flex-item9 {
+      background-color: purple;
+      padding: 10px;
+      flex: 50%;
+    }
+    
+    .flex-item10 {
+      background-color: purple;
+      padding: 10px;
+      flex: 50%;
+    }
+
+    .flex-item11 {
+      background-color: purple;
+      padding: 10px;
+      flex: 50%;
+    }
+    
+    .flex-item12 {
+      background-color: purple;
+      padding: 10px;
+      flex: 50%;
+    }
+    
+
+
+    /* Responsive layout - makes a one column-layout instead of two-column layout */
+    @media (max-width: 100%) {
+      .flex-container {
+        flex-direction: column;
+      }
+    }
+</style>
+
+<div class="jumbotron col text-center">
+<h1>Product Page</h1>
+<p>
+  <a href="{% url 'home-page' %}">หน้าแรก</a>|
+  <a href="{% url 'about-page' %}">เกี่ยวกับเรา</a>|
+  <a href="{% url 'contact-page' %}">ติดต่อเรา</a>|
+  <a href="{% url 'product-page' %}">Product</a>
+</p>
+</div>
+<h1 class="jumbotron text-center">Interested in</h1> 
+
+</head>
+
+<body>
+  <h1 class="text-center" style="color: white;"><strong>I will not hungry. T_T</strong></h1>
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-3">
+      <a href="https://www.kraftheinzfoodservice.com.au/product/100186200930/golden-circle-apple-fruit-drink-1l">
+      <img src="https://d36rz30b5p7lsd.cloudfront.net/kraftfoodserviceau/product/img/0930_1L-Golden-Circle-Apple-Fruit-Drink_0-min.png">
+      </a>
+      <h1><strong>{{item1}}</strong></h2>
+      <h3>80 บาท</h3>
+    </div>
+
+    <div class="col-sm-3">
+      <a href="https://www.amazon.com/Lakewood-Organic-Concord-32-Ounce-Bottles/dp/B001LO4YZQ">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81l-k1m15jL._SX522_PIbundle-6,TopRight,0,0_SX522SY653SH20_.jpg">
+      </a>
+      <h1><strong>{{item2}}</strong></h2>
+      <h3>120 บาท</h3>
+    </div>
+    
+    
+    <div class="col-sm-3">
+      <a href="https://www.alibaba.com/product-detail/MEYSU-1-LT-GLASS-BOTTLE-ORANGE_1700001815721.html">
+        <img src="https://sc02.alicdn.com/kf/U69abcd850084488880caa279e4826b11i.jpg">
+      </a>
+      <h1><strong>{{item3}}</strong></h1>
+      <h3>85 บาท</h3> 
+    </div>
+    
+    <div class="col-sm-3">
+      <a href="https://www.amazon.com/Lakewood-Organic-Carrot-32-Ounce-Bottles/dp/B001LNZG9U">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81Y2PCGS1dL._SX679_PIbundle-6,TopRight,0,0_SX679SY849SH20_.jpg">
+      </a>
+      <h1><strong>{{item4}}</strong></h1>
+      <h3>90 บาท</h3> 
+    </div>
+
+    <div class="col-sm-3">
+      <a href="https://www.oceanspray.com/Products/Juices/By-Type/100-Percent-Juice/100-Percent-Juice-Cranberry">
+        <img src="https://www.oceanspray.com/-/media/Project/OS/Brand-Sites/OceanSpray/Master/Intl-Master/Products/Detail/100-Percent-Cranberry-64oz.ashx">
+      </a>
+      <h1><strong>{{item5}}</strong></h1>
+      <h3>130 บาท</h3> 
+    </div>
+
+    <div class="col-sm-3">
+      <a href="https://www.thaicoconut.com/product-detail?product_item=Ng==&type=Mw==">
+        <img src="https://www.thaicoconut.com/userfiles/product/02092020-55-product-Coconut%201000%20web%20brix.png">
+      </a>
+      <h1><strong>{{item6}}</strong></h1>
+      <h3>110 บาท</h3> 
+    </div>
+
+    <div class="col-sm-3">
+      <a href="https://limeschopped.co.uk/fitness/pure-celery-juice/">
+        <img src="https://limeschopped.co.uk/fitness/wp-content/uploads/sites/3/2019/10/pure-juice-celery-cucumber-ginger.png">
+      </a>
+      <h1><strong>{{item7}}</strong></h1>
+      <h3>135 บาท</h3> 
+    </div>
+
+    <div class="col-sm-3">
+      <a href="https://cleaneatinggrocer.com/product/organic-pure-lemon-juice-pj-kl-whole-malaysia-distributor/">
+        <img src="https://cleaneatinggrocer.com/wp-content/uploads/2016/09/LAKEWOOD-ORGANIC-PURE-LEMON-JUICE.png">
+      </a>
+      <h1><strong>{{item8}}</strong></h1>
+      <h3>125 บาท</h3> 
+    </div>
+
+    <div class="col-sm-3">
+      <a href="https://shoponline.tescolotus.com/groceries/en-GB/products/6071495037">
+        <img src="https://secure.ap-tescoassets.com/assets/TH/334/8850773510334/ShotType1_540x540.jpg">
+      </a>
+      <h1><strong>{{item9}}</strong></h1>
+      <h3>105 บาท</h3> 
+    </div>
+
+    <div class="col-sm-3">
+      <a href="https://www.amazon.com/Lakewood-Organic-Papaya-32-Ounce-Bottles/dp/B001M24VX2">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81VMjZ4X1JL._SL1500_.jpg">
+      </a>
+      <h1><strong>{{item10}}</strong></h1>
+      <h3>150 บาท</h3> 
+    </div>
+
+    <div class="col-sm-3">
+      <a href="https://www.costco.ca/.product.100417820.html?langId=-24">
+        <img src="https://richmedia.ca-richimage.com/ImageDelivery/imageService?profileId=12026539&id=1798244&recipeId=500">
+      </a>
+      <h1><strong>{{item11}}</strong></h1>
+      <h3>275 บาท</h3> 
+    </div>
+
+    <div class="col-sm-3">
+      <a href="https://www.alibaba.com/product-detail/NFC-200ml-Natural-Melon-Juice-from_50019550400.html">
+        <img src="https://sc04.alicdn.com/kf/Udda7bc01a85843e4988441343e67a9fbN.jpg">
+      </a>
+      <h1><strong>{{item12}}</strong></h1>
+      <h3>140 บาท</h3> 
+    </div>
+
+  </div>
+</div>
+</body>
+
+</html>

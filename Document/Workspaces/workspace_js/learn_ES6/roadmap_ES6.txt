@@ -1,0 +1,26 @@
+Callback Function
+
+Promises in JavaScript
+
+Map() in JavaScript
+
+Filter() and Find() in JavaScript
+
+Find()
+
+reduce()
+
+Array destructuring
+
+Object destructuring
+
+**Set() in JavaScript
+
+**Dynamic Object keys in JavaScript
+
+rest and spread prototies
+
+
+
+3
+Good night 

@@ -1,0 +1,24 @@
+Ep นี้มีสอนการใช้ block
+
+วิธีเปิด Main.sublime-menu
+
+Click Preferences ==> Browse Packages 
+	- เสร็จแล้ว เข้าโฟลเดอร์ชื่อ SublimeREPL ==> config ==> Python
+	- C:\Users\Admin\AppData\Roaming\Sublime Text\Packages\SublimeREPL\config\Python
+
+
+วิธีเปิด REPL python (IDLE python language)
+Click Tools ==> SublimeREPL ==> Python ==> Python
+
+
+วิธี Set anaconda_linting(เส้นสีข้าวใต้ font ) เป็น false 
+Click Preferences ==> Package Settings ==> Anaconda ==> Setting - Default
+	- Line 251 เปลี่ยนจาก true เป็น false
+	 
+
+วิธีนำข้อมูลจาก data มาแสดงในหน้า allproduct
+หน้า allproduct.html
+
+ใช้ {{% for pd in product %}} ดึงข้อมูลจากฟังก์ชัน Product_stock เข้าถึงตัวแปรชื่อ product ในหน้า views.py
+เพื่อวนลูป call => name,price,detail,image
+ใช้ {% endfor %} เพื่อปิดคำสั่ง for loop

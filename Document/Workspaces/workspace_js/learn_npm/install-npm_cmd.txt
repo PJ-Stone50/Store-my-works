@@ -1,0 +1,12 @@
+ใช้คำสั่งนี้ลงใน CMD
+	- npm i -g axios
+	( i = install, -g = global, axios = ติดตั้งแพคเกจลงโปรเจค )
+
+ถ้าจะหาที่อยู่ npm 
+	- npm root -g
+
+ถ้าจะ uninstall
+	- npm uninstall -g axios
+
+Update Version npm
+	- npm install -g npm
