@@ -1,0 +1,40 @@
+<!-- || หน้านี้ไม่ต้องไปยุ่งกับ vies.py, urls.py -->
+{% extends 'myapp/base.html' %}
+{% block content %}
+<style>
+	body {
+		color: white;
+	}
+
+	input {
+		text-align: center; 
+	}
+
+</style>
+
+<body>
+
+	<h2 id="head-text"><strong>Login</strong></h2>
+	
+	<form id="form-style" method="POST">
+		<!-- method="POST" คือ... -->
+		{% csrf_token %}
+		<!-- csrf_token เอาไว้ใช้กับ form ถ้าไม่ใช้คำสั่งนี้เจ๊ง ใช้ยังไงเดะค่อยไปศึกษาละกัน -->
+
+		<div class="form-group">
+			<label for="price">Username (Email)</label>
+			<input type="text" class="form-control" id="username" name="username">
+		</div>
+
+		<div class="form-group">
+			<label for="price">Password</label>
+			<input type="text" class="form-control" id="password" name="password">
+		</div>
+
+		<button style="width: 11em; margin-top: 1rem;" type="submit" class="btn btn-primary">Sign in</button>
+
+	</form>
+
+</body>
+
+{% endblock content %}
